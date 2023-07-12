@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
 .App {
   text-align: center;
 }
@@ -14,8 +15,9 @@
   }
 }
 body {
-  background-color: #f8f9f9 !important;
+  background-color: #faf9f4 !important;
   font-family: "Roboto", sans-serif !important;
+  box-sizing: border-box;
 }
 .App-header {
   background-color: #282c34;
@@ -41,31 +43,86 @@ body {
   }
 }
 
+.div-1 {
+  padding: 20px 16px 16px 16px !important;
+}
+.arr-ico {
+  width: 24px;
+  height: 24px;
+  color: #141e0d;
+}
+.head-data {
+  color: #141e0d;
+  font-family: Mulish;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.edit-ico {
+  width: 20px;
+  height: 20px;
+  color: none;
+  fill: none;
+}
 .rounded-circle {
   border-radius: 100%;
   height: 50px;
   width: 50px;
   object-fit: cover;
 }
+.tag-data {
+  display: flex;
+  width: 215px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.text-span {
+  color: #606060;
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.text-s {
+  color: #141e0d;
+  font-family: Mulish;
+  font-size: 16px;
+}
 
 /* Chat container css*/
 .chat-container::-webkit-scrollbar {
   display: none;
 }
+
 .chat-container {
   padding: 20px;
   height: 420px;
   overflow: hidden;
 }
-
+.text-time {
+  color: #b7b7b7;
+  font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10px;
+}
 .message-user {
-  background-color: rgb(59, 59, 253);
+  border-radius: 12px 12px 0px 12px;
+  background-color: #1c63d5;
   padding: 8px;
   margin-bottom: 5px;
-  color: white;
-  font-size: 11px;
-  border-radius: 10px 10px 0 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 271px;
 }
 .profile-pic {
   width: 50px;
@@ -100,14 +157,19 @@ body {
 }
 
 .message-content .message {
-  background-color: white;
-  border-radius: 0 10px 10px 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 12px 12px 12px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
 
   padding: 8px;
   margin-bottom: 5px;
-  color: #656565;
-  font-size: 11px;
+  color: #606060;
+  font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 271px;
 }
 
 .user {
@@ -115,29 +177,21 @@ body {
 }
 
 .profile-pic {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-top: -33px;
-  margin-right: 5px;
-  overflow: hidden;
-}
-.profile-pic {
   position: relative;
   display: inline-block;
 }
 
-.kyc-verified-icon {
-  position: absolute;
-  bottom: 4px;
-  right: 1px;
-  color: rgb(0, 207, 243);
-  font-size: 12px;
+.profile-pic img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
-.other-user-profile-pic {
-  background-color: #2196f3;
-  object-fit: cover;
+.kyc-verified-icon {
+  position: absolute;
+  bottom: 21px;
+  right: 11px;
 }
 
 .other-user.align-right .message-content {
@@ -160,17 +214,16 @@ body {
   margin: 0 10px;
 }
 .message-input-container {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
   display: flex;
+  padding: 8px 16px;
+  justify-content: flex-end;
   align-items: center;
-  border-top: 1px solid #ccc;
-  padding: 10px;
-}
-
-.message-input {
-  flex-grow: 1;
-  border: none;
-  padding: 8px;
-  margin-right: 10px;
+  background-color: #faf9f4;
+  border-radius: 32px;
 }
 
 .icon-container {
@@ -180,7 +233,6 @@ body {
 .attach-icon,
 .send-icon {
   cursor: pointer;
-  margin-left: 10px;
 }
 
 .attach-icon {
@@ -194,6 +246,7 @@ body {
 .input-group-text {
   background-color: white !important;
   border: none !important;
+  padding: 7px !important;
 }
 .form-control {
   border: none !important;
@@ -207,14 +260,5 @@ body {
   .chat-container {
     max-height: none;
     height: calc(100vh - 200px);
-  }
-
-  .message-input-container {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 1;
-    padding: 10px;
   }
 }
